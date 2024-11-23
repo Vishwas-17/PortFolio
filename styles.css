@@ -340,6 +340,8 @@ span{
     font-size: 2.4rem;
     color: var(--snd-bg-color);
 }
+
+
 @media (max-width:1200px) 
 {
     html{
