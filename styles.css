@@ -184,6 +184,7 @@ span{
     gap: 2rem;
 }
 .services-container .services-box{
+    height: 36rem;
     flex: 1 1 30rem;
     background: var(--snd-bg-color);
     padding: 3rem 2rem 4rem;
@@ -191,6 +192,7 @@ span{
     text-align: center;
     border: .2rem solid var(--bg-color);
     transition: .5s ease;
+    box-sizing: border-box;
 }
 .services-container .services-box:hover{
     border-color: var(--main-color);
@@ -208,6 +210,9 @@ span{
 .services-box p{
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
+    overflow-wrap: break-word; /* Ensures long words break and don't overflow */
+    word-wrap: break-word; /* Older browsers */
+    text-align: justify; /* Ensures better text alignment */
 }
 
 .projects{
@@ -223,6 +228,7 @@ span{
     gap: 2.5rem;
 }
 .portfolio-container .portfolio-box{
+    height: 30rem;
     position: relative;
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bg-color);
@@ -340,6 +346,13 @@ span{
     font-size: 2.4rem;
     color: var(--snd-bg-color);
 }
+.services-box p {
+    margin: 15px 10px; 
+    padding: 10px;
+    font-size: 16px; 
+    line-height: 1.6;
+    
+  }
 
 
 @media (max-width:1200px) 
@@ -369,10 +382,29 @@ span{
         padding: 2rem 3%;
     }
 }
-@media (max-width:768px)
+@media (max-width:780px)
 {
     #menu-icon{
         display: block;
+    }
+
+    .services-box {
+        flex: 1 1 45%;
+        padding: 2rem;
+        height: auto; /* Adjust height to fit content */
+    }
+
+    .services-box p {
+        font-size: 1.4rem; /* Reduce font size on smaller screens */
+        margin: 10px 5px;
+        padding: 8px;
+    }
+
+    .services-box i {
+        font-size: 5rem; /* Reduce icon size on smaller screens */
+    }
+    .services-box h3 {
+        font-size: 2.2rem; /* Adjust heading size */
     }
     .navbar {
         position: absolute;
@@ -448,16 +480,28 @@ span{
     .contact form .input-box input{
         width: 100%;
     }
+    .services-box {
+        flex: 1 1 90%;
+        padding: 1.5rem;
+    }
+
+    .services-box p {
+        font-size: 1.3rem; /* Further reduce font size */
+        margin: 8px 4px;
+        padding: 6px;
+    }
+
+    .services-box i {
+        font-size: 4rem; /* Further reduce icon size */
+    }
+
+    .services-box h3 {
+        font-size: 1.8rem; /* Further adjust heading size */
+    }
 }
 
 
-.services-box p {
-    margin: 15px 10px; 
-    padding: 10px;
-    font-size: 16px; 
-    line-height: 1.6;
-    
-  }
+
 
   .about-content p {
     font-size: 2rem;  /* Adjust font size for readability */
